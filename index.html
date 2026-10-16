@@ -85,63 +85,40 @@
   </div>
 </section>
 
-<!-- ================= RUN SPOT LIVE ================= -->
-<section class="section live" id="live" aria-labelledby="liveHeading">
-  <div class="container">
-    <h2 class="h2" id="liveHeading"><span class="h2__en">RUN SPOT LIVE</span><span class="h2__jp">いまの、走る場所のコンディション</span></h2>
-    <div class="live__tabs mono" id="liveTabs" role="tablist" aria-label="スポットを選択"></div>
+<!-- ================= RUN SPOT LIVE（コンパクト） ================= -->
+<section class="live" id="live" aria-label="RUN SPOT LIVE">
+  <div class="container live__inner">
+    <div class="live__head mono">
+      <span class="onair"><i></i>LIVE</span>
+      <span class="live__title">RUN SPOT</span>
+      <nav class="live__tabs" id="liveTabs" aria-label="スポットを選択"></nav>
+    </div>
 
     <div class="broadcast">
       <div class="broadcast__screen">
         <video id="liveVideo" class="broadcast__video" autoplay muted loop playsinline hidden></video>
-        <div id="liveNoSignal" class="broadcast__nosignal">
-          <span class="mono">NO SIGNAL</span>
-          <span>映像準備中 / video coming soon</span>
-        </div>
+        <div id="liveNoSignal" class="broadcast__nosignal mono"><span>NO SIGNAL</span></div>
         <div class="broadcast__scanlines" aria-hidden="true"></div>
-
-        <!-- テロップ -->
-        <div class="broadcast__top">
-          <span class="onair mono"><i></i>LIVE</span>
-          <span class="mono" id="liveClock">--:--:-- JST</span>
-          <span class="mono broadcast__side" id="liveSide">JONAN</span>
-        </div>
-        <div class="broadcast__name">
-          <strong id="liveName">駒沢公園</strong>
-          <span class="mono" id="liveNameEn">KOMAZAWA PARK</span>
-        </div>
-        <div class="broadcast__verdict" id="liveVerdict">走ります。それだけ。</div>
+        <span class="broadcast__clock mono" id="liveClock">--:--:-- JST</span>
+        <span class="broadcast__side mono" id="liveSide">JONAN</span>
       </div>
 
-      <dl class="cond mono">
-        <div class="cond__item cond__item--big">
-          <dt>TEMP 気温</dt>
-          <dd><span id="liveTemp">--</span><small>°C</small></dd>
-          <dd class="cond__sub">FEELS <span id="liveFeels">--</span>°C</dd>
+      <div class="cond mono">
+        <div class="cond__name">
+          <strong id="liveName">駒沢公園</strong>
+          <span id="liveNameEn">KOMAZAWA PARK</span>
         </div>
-        <div class="cond__item cond__item--big">
-          <dt>WIND 風</dt>
-          <dd><svg id="liveWindArrow" class="cond__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L17 14 L12 11 L7 14 Z" fill="currentColor"/><path d="M12 11 V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span id="liveWind">--</span><small>m/s</small></dd>
-          <dd class="cond__sub" id="liveWindDir">--</dd>
-        </div>
-        <div class="cond__item">
-          <dt>HUMIDITY 湿度</dt>
-          <dd><span id="liveHum">--</span><small>%</small></dd>
-        </div>
-        <div class="cond__item">
-          <dt>RAIN 降水</dt>
-          <dd><span id="liveRain">--</span><small>mm</small></dd>
-        </div>
-        <div class="cond__item">
-          <dt>SKY 空</dt>
-          <dd class="cond__text" id="liveSky">--</dd>
-        </div>
-        <div class="cond__item">
-          <dt>SUNRISE / SUNSET</dt>
-          <dd class="cond__text" id="liveSun">--</dd>
-        </div>
-        <div class="cond__foot"><span id="liveUpdated">--</span><span>SOURCE: OPEN-METEO</span></div>
-      </dl>
+        <ul class="cond__row">
+          <li><em>TEMP</em><b><span id="liveTemp">--</span>°C</b><small>FEELS <span id="liveFeels">--</span>°</small></li>
+          <li><em>WIND</em><b><svg id="liveWindArrow" class="cond__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L17 14 L12 11 L7 14 Z" fill="currentColor"/><path d="M12 11 V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span id="liveWind">--</span>m/s</b><small id="liveWindDir">--</small></li>
+          <li><em>HUM</em><b><span id="liveHum">--</span>%</b></li>
+          <li><em>RAIN</em><b><span id="liveRain">--</span>mm</b></li>
+          <li><em>SKY</em><b class="cond__text" id="liveSky">--</b></li>
+          <li><em>SUN</em><b class="cond__text" id="liveSun">--</b></li>
+        </ul>
+        <p class="cond__verdict" id="liveVerdict">走ります。それだけ。</p>
+        <p class="cond__foot"><span id="liveUpdated">--</span> · OPEN-METEO</p>
+      </div>
     </div>
   </div>
 </section>
