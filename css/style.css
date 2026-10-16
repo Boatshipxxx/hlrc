@@ -186,11 +186,11 @@ img { max-width: 100%; display: block; }
 .linemap__stations span {
   margin-top: 22px; writing-mode: vertical-rl; font-size: 13px; font-weight: 700; letter-spacing: .1em; line-height: 1.2; height: 120px;
 }
-.linemap__stations small { display: block; font-family: var(--font-mono); font-size: 10px; font-weight: 400; color: var(--yellow); margin-left: 6px; letter-spacing: 0; }
+.linemap__stations small { display: block; font-family: var(--font-mono); font-size: 11px; font-weight: 400; color: var(--yellow); margin-left: 6px; letter-spacing: 0; }
 .linemap__stations .is-base i { background: var(--yellow); width: 22px; height: 22px; top: 4px; }
 .linemap__stations .is-base span { color: var(--white); }
 .linemap__stations .is-mid i { background: var(--purple); border-color: var(--paper); }
-.linemap__stations .is-tbd i { background: var(--ink); border: 3px dashed var(--yellow); }
+.linemap__stations .is-tbd i { background: var(--ink); border: 3px solid var(--yellow); }
 .linemap__stations .is-tbd small { opacity: .8; }
 
 .fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
@@ -277,12 +277,13 @@ img { max-width: 100%; display: block; }
   .pc-only { display: none; }
   .section { padding: 64px 0; }
   .header { padding: 0 16px; gap: 12px; }
-  .header__nav { gap: 14px; font-size: 11px; overflow-x: auto; }
+  .header__nav { display: none; }
+  .header .btn--small { margin-left: auto; }
   .hero { min-height: auto; }
   .hero__inner { padding: 56px 0 72px; margin-left: 24px; }
-  .hero__collage .sticker--purple { right: -20px; top: 20px; transform: rotate(8deg) scale(.6); transform-origin: right top; }
+  .hero__collage .sticker--purple { right: -24px; top: 12px; transform: rotate(8deg) scale(.55); transform-origin: right top; }
   .hero__collage .sticker--yellow { right: 12px; bottom: 16px; font-size: 20px; }
-  .photo--hero, .tape--2, .hero__collage .stamp { display: none; }
+  .photo--hero, .tape--1, .tape--2, .hero__collage .stamp { display: none; }
   .halftone { width: 70vw; height: 70vw; }
   .hero__actions .btn { width: 100%; }
   .about__grid { grid-template-columns: 1fr; }
