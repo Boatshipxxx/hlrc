@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HLRC | Hanzomon Line Run Club — 半蔵門線ランクラブ</title>
+<meta name="description" content="東京メトロ半蔵門線沿線を走るランクラブ。城南（駒沢・渋谷）と城東（押上・錦糸町）を半蔵門線でつなぐ。経験不問。走りたい気持ちと好奇心があればOK。参加はInstagramのDMで。">
+<meta property="og:title" content="HLRC | Hanzomon Line Run Club">
+<meta property="og:description" content="走ります。それだけ。／ Corremos. Nada más. 半蔵門線沿線を走るランクラブ。参加はDMで。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 紙のザラつき（ゼロックス質感） -->
+<svg class="grain-defs" aria-hidden="true" width="0" height="0">
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+</svg>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ティッカー -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker">
+    <span>走ります。それだけ。</span><span>Corremos. Nada más.</span><span>We run. That's it.</span><span>#HLRC</span><span>#HanzomonLine</span><span>城南 ⇄ 城東</span><span>RUN HOT. TOKYO</span>
+  </div>
+</div>
+
+<header class="header">
+  <a href="#top" class="header__logo" aria-label="HLRC top">HLRC</a>
+  <nav class="header__nav" aria-label="メインナビゲーション">
+    <a href="#about">ABOUT</a>
+    <a href="#line">LINE</a>
+    <a href="#formats">RUNS</a>
+    <a href="#schedule">SCHEDULE</a>
+    <a href="#join">JOIN</a>
+  </nav>
+  <a class="btn btn--small js-ig" href="#join">DM</a>
+</header>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__inner">
+    <p class="hero__kicker mono">TOKYO METRO HANZOMON LINE &nbsp;//&nbsp; EST. KOMAZAWA PARK</p>
+    <h1 class="hero__title">
+      <span class="hero__big">HLRC</span>
+      <span class="hero__sub">HANZOMON LINE<br>RUN CLUB</span>
+    </h1>
+    <p class="hero__jp">半蔵門線ランクラブ</p>
+
+    <div class="tagline">
+      <p class="tagline__main">走ります。<br class="sp-only">それだけ。</p>
+      <p class="tagline__alt mono">Corremos. Nada más. &nbsp;/&nbsp; We run. That's it.</p>
+    </div>
+
+    <div class="hero__actions">
+      <a class="btn btn--primary js-ig" href="#join">
+        DMで参加する <span class="btn__en">JOIN VIA DM</span>
+      </a>
+      <a class="btn btn--outline" href="#schedule">今月の予定 <span class="btn__en">THIS MONTH</span></a>
+    </div>
+    <p class="hero__note mono">経験不問。走りたい気持ちと好奇心があればOK。<br>No experience needed. Just the urge to run and a bit of curiosity.</p>
+  </div>
+
+  <!-- コラージュ要素 -->
+  <div class="hero__collage" aria-hidden="true">
+    <div class="sticker sticker--purple">
+      <span class="sticker__big">城南</span>
+      <span class="sticker__vs">VS</span>
+      <span class="sticker__big">城東</span>
+    </div>
+    <div class="sticker sticker--yellow mono">RUN<br>HOT.</div>
+    <div class="tape tape--1"></div>
+    <div class="tape tape--2"></div>
+    <div class="halftone"></div>
+    <div class="photo photo--hero"><span class="mono">PHOTO<br>駒沢公園 6:30</span></div>
+    <div class="stamp mono">FORMERLY<br>KCRDC</div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section about" id="about">
+  <div class="container">
+    <h2 class="h2"><span class="h2__en">ABOUT</span><span class="h2__jp">半蔵門線で、つなぐ。</span></h2>
+    <div class="about__grid">
+      <div class="about__text">
+        <p class="lead">
+          駒沢公園発の <strong>Komazawa Run Club（KCRDC）</strong> から発展した、<br class="pc-only">
+          東京メトロ半蔵門線沿線を走るランクラブ。
+        </p>
+        <p>
+          城南（駒沢・渋谷側）と城東（押上・錦糸町側）を半蔵門線でつなぎ、
+          ときに競い合うランチームへ。朝はコーヒー、夜はビール。走ったあとの一杯まで含めてランです。
+        </p>
+        <p class="en mono">
+          Born at Komazawa Park as KCRDC, now stretching along the Hanzomon Line —
+          linking Jonan (Komazawa / Shibuya side) and Joto (Oshiage / Kinshicho side),
+          sometimes as rivals, always as one crew. Coffee in the morning, beer at night.
+        </p>
+      </div>
+      <ul class="about__facts mono">
+        <li><span>SINCE</span><strong>KOMAZAWA PARK</strong></li>
+        <li><span>LINE</span><strong>HANZOMON</strong></li>
+        <li><span>SIDES</span><strong>JONAN / JOTO</strong></li>
+        <li><span>LANG</span><strong>JP / EN / ES</strong></li>
+        <li><span>LEVEL</span><strong>ANY</strong></li>
+        <li><span>ENTRY</span><strong>DM</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LINE MAP ================= -->
+<section class="section line" id="line">
+  <div class="container">
+    <h2 class="h2 h2--light"><span class="h2__en">THE LINE</span><span class="h2__jp">拠点とフィールド</span></h2>
+    <p class="line__intro mono">Z 半蔵門線 ── 駒沢大学（田園都市線直通）から押上まで。★は集合地・コーヒー中継点。</p>
+
+    <div class="linemap" role="img" aria-label="半蔵門線の路線図。城南側に駒沢・渋谷、城東側に清澄白河・錦糸町・押上。">
+      <div class="linemap__side linemap__side--jonan mono">JONAN 城南</div>
+      <div class="linemap__side linemap__side--joto mono">JOTO 城東</div>
+      <ol class="linemap__stations">
+        <li class="is-base"><i></i><span>駒沢大学<small>Komazawa Park ★</small></span></li>
+        <li class="is-base"><i></i><span>渋谷<small>→ Yoyogi Park ★</small></span></li>
+        <li><i></i><span>表参道</span></li>
+        <li><i></i><span>青山一丁目</span></li>
+        <li><i></i><span>永田町</span></li>
+        <li class="is-base is-mid"><i></i><span>半蔵門<small>JOGLIS ★</small></span></li>
+        <li><i></i><span>九段下</span></li>
+        <li><i></i><span>神保町</span></li>
+        <li><i></i><span>大手町</span></li>
+        <li><i></i><span>三越前</span></li>
+        <li class="is-base"><i></i><span>水天宮前<small>ととけん ★</small></span></li>
+        <li><i></i><span>清澄白河</span></li>
+        <li><i></i><span>住吉</span></li>
+        <li class="is-tbd"><i></i><span>錦糸町<small>拠点調整中</small></span></li>
+        <li class="is-tbd"><i></i><span>押上<small>拠点調整中</small></span></li>
+      </ol>
+    </div>
+
+    <div class="fields">
+      <article class="field">
+        <p class="field__tag mono">JONAN / 城南</p>
+        <h3>駒沢公園・代々木公園</h3>
+        <p>従来の集合地はトレーニングセンター前。朝は Little Nap や Onibus でコーヒー。</p>
+        <p class="en mono">Komazawa Park (meet at the Training Center) &amp; Yoyogi Park. Coffee at Little Nap / Onibus.</p>
+      </article>
+      <article class="field field--tbd">
+        <p class="field__tag mono">JOTO / 城東</p>
+        <h3>押上・錦糸町エリア</h3>
+        <p>半蔵門線東側の新フィールド。集合地とコーヒー中継点は現在整理中。推しの店、募集中。</p>
+        <p class="en mono">East side of the line. Meeting point &amp; coffee stops TBD — recommendations welcome.</p>
+        <span class="wanted mono">WANTED: COFFEE STOP</span>
+      </article>
+      <article class="field">
+        <p class="field__tag mono">AWAY / 遠征</p>
+        <h3>鎌倉トレイルなど</h3>
+        <p>ときどき線路を離れて山へ。トレイル、海、帰りのビール。</p>
+        <p class="en mono">Occasional trips off the line — Kamakura trails, the sea, beer on the way home.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FORMATS ================= -->
+<section class="section formats" id="formats">
+  <div class="container">
+    <h2 class="h2"><span class="h2__en">RUNS</span><span class="h2__jp">イベントフォーマット</span></h2>
+    <div class="formats__grid">
+      <article class="format format--morning">
+        <p class="format__time mono">AM 6:30</p>
+        <h3>Run Morning's</h3>
+        <p>早朝ラン＋コーヒー。Little Nap、Onibus など、走ったあとの一杯まで。</p>
+        <p class="en mono">Early run + coffee. Little Nap, Onibus and friends.</p>
+      </article>
+      <article class="format format--night">
+        <p class="format__time mono">PM 7:30</p>
+        <h3>Run Nighter's</h3>
+        <p>19:30 スタート。終わったらビール。</p>
+        <p class="en mono">Start at 19:30. Beer after.</p>
+      </article>
+      <article class="format format--caffeine">
+        <p class="format__time mono">ANYTIME</p>
+        <h3>And Caffeine</h3>
+        <p>コーヒーブレイク込みの企画。走る距離より、寄る店。</p>
+        <p class="en mono">Runs built around a coffee break. The stop matters more than the distance.</p>
+      </article>
+      <article class="format format--vs">
+        <p class="format__time mono">NEW</p>
+        <h3>城東 vs 城南</h3>
+        <p>半蔵門線の東と西で、対抗したり交流したり。初回企画は設計中。</p>
+        <p class="en mono">Joto vs Jonan. East meets west on the Hanzomon Line — rivalry and friendship. First edition in the works.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHEDULE ================= -->
+<section class="section schedule" id="schedule">
+  <div class="container">
+    <h2 class="h2 h2--light"><span class="h2__en">SCHEDULE</span><span class="h2__jp" id="scheduleTitle">今月の予定</span></h2>
+    <div class="legend mono">
+      <span class="pill pill--morning">朝 MORNING</span>
+      <span class="pill pill--night">夜 NIGHT</span>
+    </div>
+    <ol class="sched" id="schedule-list"><!-- js/schedule.js から描画 --></ol>
+    <p class="schedule__note mono">最新はInstagramで。雨天時はDMで連絡。 / Latest on Instagram. Rain updates via DM.</p>
+  </div>
+</section>
+
+<!-- ================= JOIN (求人票パロディ) ================= -->
+<section class="section join" id="join">
+  <div class="container container--narrow">
+    <h2 class="h2"><span class="h2__en">JOIN</span><span class="h2__jp">募集要項</span></h2>
+
+    <div class="jobsheet">
+      <div class="jobsheet__head mono">
+        <span>求人票 / JOB POSTING</span>
+        <span>No. HLRC-001</span>
+      </div>
+      <dl class="jobsheet__body">
+        <dt>職種</dt><dd>ランナー<span class="en mono">Runner (no experience required)</span></dd>
+        <dt>勤務地</dt><dd>東京メトロ半蔵門線沿線（城南／城東）、ときどき鎌倉<span class="en mono">Along the Hanzomon Line, Tokyo. Sometimes Kamakura.</span></dd>
+        <dt>勤務時間</dt><dd>朝 6:30〜 ／ 夜 19:30〜<span class="en mono">Mornings from 6:30 / Nights from 19:30</span></dd>
+        <dt>給与</dt><dd>コーヒーとビール（現物支給）<span class="en mono">Coffee &amp; beer, paid in kind.</span></dd>
+        <dt>応募資格</dt><dd>走りたい気持ちと好奇心。経験・ペース不問。<span class="en mono">The urge to run and curiosity. Any pace, any level.</span></dd>
+        <dt>言語</dt><dd>日本語 / English / Español<span class="en mono">Bilingual crew. International runners welcome.</span></dd>
+        <dt>応募方法</dt><dd>Instagram の DM で「走りたい」と一言。<span class="en mono">DM us on Instagram. Just say "I want to run."</span></dd>
+      </dl>
+      <div class="jobsheet__foot">
+        <a class="btn btn--primary btn--block js-ig" href="#">Instagram で DM する <span class="btn__en">SEND A DM</span></a>
+        <p class="hashtags mono">#HLRC &nbsp;#HanzomonLine &nbsp;#半蔵門線ランクラブ &nbsp;#RunHot</p>
+      </div>
+      <div class="stamp stamp--approved mono" aria-hidden="true">急募<br>HIRING</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__big">RUN HOT.</p>
+    <div class="footer__meta mono">
+      <span>HANZOMON LINE RUN CLUB — TOKYO</span>
+      <span>Formerly Komazawa Run Club (KCRDC)</span>
+      <a class="js-ig" href="#">Instagram</a>
+    </div>
+    <p class="footer__copy mono">&copy; <span id="year"></span> HLRC</p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
