@@ -33,6 +33,7 @@
 <header class="header">
   <a href="#top" class="header__logo" aria-label="HLRC top">HLRC</a>
   <nav class="header__nav" aria-label="メインナビゲーション">
+    <a href="#live">LIVE</a>
     <a href="#about">ABOUT</a>
     <a href="#line">LINE</a>
     <a href="#formats">RUNS</a>
@@ -81,6 +82,67 @@
     <div class="halftone"></div>
     <div class="photo photo--hero"><span class="mono">PHOTO<br>駒沢公園 6:30</span></div>
     <div class="stamp mono">FORMERLY<br>KCRDC</div>
+  </div>
+</section>
+
+<!-- ================= RUN SPOT LIVE ================= -->
+<section class="section live" id="live" aria-labelledby="liveHeading">
+  <div class="container">
+    <h2 class="h2" id="liveHeading"><span class="h2__en">RUN SPOT LIVE</span><span class="h2__jp">いまの、走る場所のコンディション</span></h2>
+    <div class="live__tabs mono" id="liveTabs" role="tablist" aria-label="スポットを選択"></div>
+
+    <div class="broadcast">
+      <div class="broadcast__screen">
+        <video id="liveVideo" class="broadcast__video" autoplay muted loop playsinline hidden></video>
+        <div id="liveNoSignal" class="broadcast__nosignal">
+          <span class="mono">NO SIGNAL</span>
+          <span>映像準備中 / video coming soon</span>
+        </div>
+        <div class="broadcast__scanlines" aria-hidden="true"></div>
+
+        <!-- テロップ -->
+        <div class="broadcast__top">
+          <span class="onair mono"><i></i>LIVE</span>
+          <span class="mono" id="liveClock">--:--:-- JST</span>
+          <span class="mono broadcast__side" id="liveSide">JONAN</span>
+        </div>
+        <div class="broadcast__name">
+          <strong id="liveName">駒沢公園</strong>
+          <span class="mono" id="liveNameEn">KOMAZAWA PARK</span>
+        </div>
+        <div class="broadcast__verdict" id="liveVerdict">走ります。それだけ。</div>
+      </div>
+
+      <dl class="cond mono">
+        <div class="cond__item cond__item--big">
+          <dt>TEMP 気温</dt>
+          <dd><span id="liveTemp">--</span><small>°C</small></dd>
+          <dd class="cond__sub">FEELS <span id="liveFeels">--</span>°C</dd>
+        </div>
+        <div class="cond__item cond__item--big">
+          <dt>WIND 風</dt>
+          <dd><svg id="liveWindArrow" class="cond__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L17 14 L12 11 L7 14 Z" fill="currentColor"/><path d="M12 11 V22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span id="liveWind">--</span><small>m/s</small></dd>
+          <dd class="cond__sub" id="liveWindDir">--</dd>
+        </div>
+        <div class="cond__item">
+          <dt>HUMIDITY 湿度</dt>
+          <dd><span id="liveHum">--</span><small>%</small></dd>
+        </div>
+        <div class="cond__item">
+          <dt>RAIN 降水</dt>
+          <dd><span id="liveRain">--</span><small>mm</small></dd>
+        </div>
+        <div class="cond__item">
+          <dt>SKY 空</dt>
+          <dd class="cond__text" id="liveSky">--</dd>
+        </div>
+        <div class="cond__item">
+          <dt>SUNRISE / SUNSET</dt>
+          <dd class="cond__text" id="liveSun">--</dd>
+        </div>
+        <div class="cond__foot"><span id="liveUpdated">--</span><span>SOURCE: OPEN-METEO</span></div>
+      </dl>
+    </div>
   </div>
 </section>
 
@@ -258,6 +320,8 @@
 
 <script src="js/config.js"></script>
 <script src="js/schedule.js"></script>
+<script src="js/spots.js"></script>
+<script src="js/live.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
