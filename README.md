@@ -40,7 +40,7 @@
 
 ## 初回に設定するもの
 
-- [ ] `js/config.js` の `instagramUrl` を HLRC のアカウントに変更
+- [x] `js/config.js` の `instagramUrl` を HLRC のアカウント（@hlrc.tokyo）に設定済み
 - [ ] `assets/og.png`（1200×630）を用意。Instagram で告知したときのシェア画像になります
 - [ ] 城東側の集合地・コーヒー中継点が決まったら `index.html` の「JOTO / 城東」カードと路線図（錦糸町・押上）を更新
 - [ ] `js/spots.js` の `video` に各スポットの短い動画（固定カメラ・ループ向き）を設定
