@@ -11,7 +11,8 @@
 ├── css/style.css     # 90年代ジン／ゼロックス質感のスタイル。色は :root で変更
 ├── js/config.js      # Instagram URL（全CTAに反映）
 ├── js/schedule.js    # 今月の予定データ（毎月ここだけ更新）
-├── js/spots.js       # RUN SPOT LIVE のスポット（緯度経度・動画URL）
+├── js/spots.js       # RUN SPOT LIVE のスポット（先頭が初期表示・緯度経度・動画URL）
+├── js/line.js        # THE LINE 路線図（駅ごとの regular フラグで定期開催マーク）
 ├── js/live.js        # ライブ配信風ブロック（Open-Meteo から気温・風向などを取得）
 ├── js/main.js        # スケジュール描画・ティッカー・リンク設定
 ├── assets/           # favicon / OGP画像
@@ -38,11 +39,19 @@
 - 映像: `js/spots.js` の `video` にスポットごとの mp4 / webm の URL を入れると自動再生（ミュート・ループ）。未設定の間は「NO SIGNAL」画面
 - 一言コメントの判定ルール（雨・強風・暑さ・寒さ）: `js/live.js` の `verdict()`
 
+## THE LINE（路線図）の更新
+
+`js/line.js` の `stations` 配列で管理しています。定期開催の集合地が決まった駅は `regular: true` にすると、黄色の大きな駅マークと「定期 REGULAR」バッジが付きます。`note` に集合地やコーヒー中継点を書けます。`tbd: true` は拠点調整中の表示です。
+
+```js
+{ name: '押上', en: 'OSHIAGE', side: 'JOTO', regular: true, note: '集合地名' }
+```
+
 ## 初回に設定するもの
 
 - [x] `js/config.js` の `instagramUrl` を HLRC のアカウント（@hlrc.tokyo）に設定済み
 - [ ] `assets/og.png`（1200×630）を用意。Instagram で告知したときのシェア画像になります
-- [ ] 城東側の集合地・コーヒー中継点が決まったら `index.html` の「JOTO / 城東」カードと路線図（錦糸町・押上）を更新
+- [ ] 城東側（押上）の集合地が決まったら `js/line.js` の `regular` を切り替え、`index.html` の「城東」カードを更新
 - [ ] `js/spots.js` の `video` に各スポットの短い動画（固定カメラ・ループ向き）を設定
 - [ ] ヒーローの写真枠（`.photo--hero`）を実際の写真に差し替え
 

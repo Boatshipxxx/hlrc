@@ -44,7 +44,7 @@
     if (c.wind_speed_10m >= 8) return { jp: '強風。向かい風を楽しむ日。', en: 'WINDY. EMBRACE IT.' };
     if (c.temperature_2m >= 30) return { jp: '暑い。水、持った？', en: 'HOT. BRING WATER.' };
     if (c.temperature_2m <= 5) return { jp: '寒い。走れば温まる。', en: 'COLD. RUN HOT.' };
-    return { jp: '走ります。それだけ。', en: 'WE RUN. THAT\'S IT.' };
+    return { jp: 'いいコンディション。', en: 'GOOD TO GO.' };
   }
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
@@ -61,7 +61,7 @@
     if (!c) {
       ['temp', 'feels', 'wind', 'hum', 'rain'].forEach(function (k) { el[k].textContent = '--'; });
       el.windDir.textContent = '--'; el.sky.textContent = 'NO DATA'; el.sun.textContent = '--';
-      el.updated.textContent = 'OFFLINE'; el.verdict.textContent = '走ります。それだけ。';
+      el.updated.textContent = 'OFFLINE'; el.verdict.textContent = 'NO DATA';
       el.windArrow.style.transform = 'rotate(0deg)';
       return;
     }
@@ -111,8 +111,9 @@
     setVideo(spot); load(spot);
   }
 
-  tabs.innerHTML = spots.map(function (s) {
-    return '<button type="button" role="tab" data-id="' + s.id + '" aria-selected="false">' + s.name + '<small>' + s.side + '</small></button>';
+  tabs.innerHTML = spots.map(function (s, i) {
+    var sep = (i > 0 && spots[i - 1].group !== s.group) ? '<span class="live__sep" aria-hidden="true">/</span>' : '';
+    return sep + '<button type="button" role="tab" data-id="' + s.id + '" aria-selected="false">' + s.name + '<small>' + s.side + '</small></button>';
   }).join('');
   tabs.addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (b) select(b.dataset.id);
