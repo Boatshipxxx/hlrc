@@ -111,8 +111,9 @@
     setVideo(spot); load(spot);
   }
 
-  tabs.innerHTML = spots.map(function (s) {
-    return '<button type="button" role="tab" data-id="' + s.id + '" aria-selected="false">' + s.name + '<small>' + s.side + '</small></button>';
+  tabs.innerHTML = spots.map(function (s, i) {
+    var sep = (i > 0 && spots[i - 1].group !== s.group) ? '<span class="live__sep" aria-hidden="true">/</span>' : '';
+    return sep + '<button type="button" role="tab" data-id="' + s.id + '" aria-selected="false">' + s.name + '<small>' + s.side + '</small></button>';
   }).join('');
   tabs.addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (b) select(b.dataset.id);

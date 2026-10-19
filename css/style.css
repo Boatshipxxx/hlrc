@@ -137,20 +137,26 @@ a { color: inherit; text-decoration: none; }
 .post__lead { font-size: 12px; margin-top: 10px; color: rgba(18,10,38,.75); }
 .post:hover .post__title { color: var(--ink); }
 
-/* ---------- THE LINE ---------- */
-.linemap { position: relative; padding: 32px 0 56px; }
-.linemap__side { position: absolute; top: 0; font-size: 11px; letter-spacing: .18em; font-weight: 700; color: var(--purple-deep); }
-.linemap__side--jonan { left: 0; }
-.linemap__side--joto { right: 0; }
-.linemap__stations { position: relative; display: flex; justify-content: space-between; margin-top: 20px; }
-.linemap__stations::before { content: ""; position: absolute; left: 0; right: 0; top: 10px; height: 8px; background: var(--purple); }
-.linemap__stations li { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; }
-.linemap__stations i { width: 14px; height: 14px; border-radius: 50%; background: var(--white); border: 3px solid var(--ink); position: relative; top: 7px; z-index: 1; }
-.linemap__stations span { margin-top: 20px; writing-mode: vertical-rl; font-size: 12px; font-weight: 700; letter-spacing: .1em; line-height: 1.2; height: 130px; }
-.linemap__stations small { display: block; font-family: var(--font-mono); font-size: 10px; font-weight: 400; color: var(--purple-deep); margin-left: 6px; letter-spacing: 0; }
-.linemap__stations .is-base i { background: var(--yellow); width: 20px; height: 20px; top: 4px; }
-.linemap__stations .is-mid i { background: var(--purple); }
-.linemap__stations .is-tbd i { background: var(--white); border-color: var(--purple-deep); }
+/* ---------- THE LINE（グリッド右の縦路線図） ---------- */
+.linecard { border: 1px solid var(--ink); padding: 16px 18px 14px; background: var(--white); }
+.linecard__head { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .14em; font-weight: 700; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.linecard .card__meta { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--ink); }
+.lm { position: relative; padding: 14px 0 6px; }
+.lm__side { display: block; font-size: 10px; letter-spacing: .18em; font-weight: 700; color: var(--purple-deep); padding-left: 34px; }
+.lm__list { position: relative; margin: 8px 0; }
+.lm__list::before { content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 8px; background: var(--purple); }
+.lm__st { position: relative; display: flex; align-items: center; gap: 14px; padding: 5px 0; }
+.lm__st i { flex-shrink: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--white); border: 3px solid var(--ink); margin-left: 7px; position: relative; z-index: 1; }
+.lm__body { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.lm__name { font-size: 13px; font-weight: 700; }
+.lm__en { font-size: 9px; letter-spacing: .12em; color: rgba(18,10,38,.5); }
+.lm__badge { font-size: 9px; letter-spacing: .12em; font-weight: 700; background: var(--yellow); color: var(--ink); padding: 1px 6px; }
+.lm__badge--tbd { background: transparent; border: 1px dashed var(--purple-deep); color: var(--purple-deep); }
+.lm__note { font-size: 10px; color: var(--purple-deep); font-weight: 700; }
+.lm__st.is-regular i { width: 18px; height: 18px; margin-left: 4px; background: var(--yellow); }
+.lm__st.is-regular .lm__name { font-size: 16px; font-weight: 900; }
+.lm__st.is-tbd i { border-style: dashed; border-color: var(--purple-deep); }
+.lm__st.is-tbd .lm__name { color: rgba(18,10,38,.6); }
 
 /* ---------- JOIN / 求人票 ---------- */
 .jobsheet { position: relative; background: var(--white); border: var(--border); box-shadow: var(--shadow); }
@@ -184,7 +190,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 1024px) {
   .grid__layout { grid-template-columns: 1fr; }
   .grid__small { grid-template-columns: repeat(3, 1fr); }
-  .card--feature .card__img { aspect-ratio: 16 / 10; }
   .statement__grid { grid-template-columns: 1fr; gap: 24px; }
 }
 @media (max-width: 768px) {
@@ -195,6 +200,7 @@ a { color: inherit; text-decoration: none; }
   .hero { height: 78vh; min-height: 460px; }
   .hero__lockup { right: 4%; top: 46%; }
   .hero__big { font-size: clamp(120px, 34vw, 180px); }
+  .hero__photo { padding-bottom: 110px; }
   .campaign { grid-template-columns: 1fr; }
   .campaign__poster { padding: 32px 16px; }
   .poster { padding: 24px 20px 20px; aspect-ratio: auto; }
@@ -203,9 +209,6 @@ a { color: inherit; text-decoration: none; }
   .grid__small { grid-template-columns: repeat(2, 1fr); gap: 20px 14px; }
   .band { height: 46vh; min-height: 240px; }
   .dispatch__grid { grid-template-columns: 1fr; gap: 32px; }
-  .linemap { overflow-x: auto; padding-bottom: 16px; }
-  .linemap__stations { min-width: 820px; }
-  .linemap__side { position: static; display: inline-block; margin-right: 24px; }
   .jobsheet__body { grid-template-columns: 1fr; }
   .jobsheet__body dt { padding: 8px 16px; border-bottom: 0; font-size: 12px; letter-spacing: .1em; }
   .jobsheet__body dd { padding: 8px 16px 14px; }
@@ -227,6 +230,7 @@ a { color: inherit; text-decoration: none; }
 .live__tabs { margin-left: auto; display: flex; gap: 14px; overflow-x: auto; }
 .live__tabs button { background: none; border: 0; padding: 2px 0; color: rgba(243,239,230,.55); font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .12em; cursor: pointer; white-space: nowrap; border-bottom: 2px solid transparent; }
 .live__tabs button small { display: none; }
+.live__sep { color: rgba(243,239,230,.35); font-size: 12px; align-self: center; }
 .live__tabs button:hover { color: var(--paper); }
 .live__tabs button.is-active { color: var(--yellow); border-bottom-color: var(--yellow); }
 

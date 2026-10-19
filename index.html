@@ -134,23 +134,28 @@
           <div class="card__meta"><span>And Caffeine — コーヒーブレイク込み</span><span>ANYTIME</span></div>
         </a>
         <a class="card" href="#line">
-          <div class="card__img photo"><span class="mono">KOMAZAWA<br>YOYOGI</span></div>
-          <div class="card__meta"><span>城南 — 駒沢公園（トレセン前）・代々木公園</span><span>JONAN</span></div>
+          <div class="card__img photo"><span class="mono">KOMAZAWA<br>MEIJI PARK</span></div>
+          <div class="card__meta"><span>城南 — 駒沢公園（トレセン前）・明治公園</span><span>JONAN</span></div>
         </a>
         <a class="card card--tbd" href="#line">
-          <div class="card__img photo"><span class="mono">OSHIAGE<br>KINSHICHO</span></div>
-          <div class="card__meta"><span>城東 — 押上・錦糸町エリア（拠点調整中）</span><span>JOTO</span></div>
+          <div class="card__img photo"><span class="mono">HANZOMON<br>SUITENGU<br>OSHIAGE</span></div>
+          <div class="card__meta"><span>城東 — 半蔵門・水天宮・押上（押上側は拠点調整中）</span><span>JOTO</span></div>
         </a>
         <a class="card" href="#line">
           <div class="card__img photo"><span class="mono">KAMAKURA<br>TRAIL</span></div>
           <div class="card__meta"><span>遠征 — 鎌倉トレイルなど</span><span>AWAY</span></div>
         </a>
       </div>
-      <a class="card card--feature" href="#join">
-        <div class="card__img photo photo--purple"><span class="feature__type">城東<em>vs</em>城南</span></div>
-        <div class="card__meta"><span>城東 vs 城南 — 半蔵門線の東と西で、対抗したり交流したり。初回企画は設計中</span><span>NEW</span></div>
-      </a>
-    </div>
+      <div class="card card--feature linecard" id="line">
+        <div class="linecard__head mono"><span>THE LINE</span><span>駒沢大学 — 押上</span></div>
+        <div class="lm">
+          <span class="lm__side mono">JONAN 城南</span>
+          <ol class="lm__list" id="linemap"><!-- js/line.js から描画 --></ol>
+          <span class="lm__side mono">JOTO 城東</span>
+        </div>
+        <div class="card__meta"><span>★ 定期開催の集合地。拠点が決まった駅から順にマークします</span><span>LINE</span></div>
+      </div>
+          </div>
   </div>
 </section>
 
@@ -168,38 +173,10 @@
         <p class="post__lead mono">半蔵門線の東側に新フィールド。集合地とコーヒー中継点、推しの店を DM で教えてください。</p>
       </a>
       <a class="post js-ig" href="#join">
-        <h3 class="post__title">'KCRDC → HLRC'<br>駒沢から、半蔵門線へ。</h3>
-        <div class="post__img photo"><span class="mono">PHOTO<br>駒沢公園</span></div>
-        <p class="post__lead mono">ハッシュタグは #HLRC #HanzomonLine に。ロゴと既存アートもリネーム中。</p>
+        <h3 class="post__title">'AWAY'<br>鎌倉トレイル、ときどき。</h3>
+        <div class="post__img photo"><span class="mono">PHOTO<br>鎌倉</span></div>
+        <p class="post__lead mono">線路を離れて山へ。トレイル、海、帰りのビール。次回はInstagramで告知。</p>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= THE LINE（路線図） ================= -->
-<section class="section line" id="line">
-  <div class="container">
-    <header class="section__head mono"><span>THE LINE</span><span>駒沢大学 — 押上 ／ ★ 集合地・コーヒー中継点</span></header>
-    <div class="linemap" role="img" aria-label="半蔵門線の路線図。城南側に駒沢・渋谷、城東側に清澄白河・錦糸町・押上。">
-      <div class="linemap__side linemap__side--jonan mono">JONAN 城南</div>
-      <div class="linemap__side linemap__side--joto mono">JOTO 城東</div>
-      <ol class="linemap__stations">
-        <li class="is-base"><i></i><span>駒沢大学<small>Komazawa Park ★</small></span></li>
-        <li class="is-base"><i></i><span>渋谷<small>→ Yoyogi Park ★</small></span></li>
-        <li><i></i><span>表参道</span></li>
-        <li><i></i><span>青山一丁目</span></li>
-        <li><i></i><span>永田町</span></li>
-        <li class="is-base is-mid"><i></i><span>半蔵門<small>JOGLIS ★</small></span></li>
-        <li><i></i><span>九段下</span></li>
-        <li><i></i><span>神保町</span></li>
-        <li><i></i><span>大手町</span></li>
-        <li><i></i><span>三越前</span></li>
-        <li class="is-base"><i></i><span>水天宮前<small>ととけん ★</small></span></li>
-        <li><i></i><span>清澄白河</span></li>
-        <li><i></i><span>住吉</span></li>
-        <li class="is-tbd"><i></i><span>錦糸町<small>TBD</small></span></li>
-        <li class="is-tbd"><i></i><span>押上<small>TBD</small></span></li>
-      </ol>
     </div>
   </div>
 </section>
@@ -233,8 +210,8 @@
   <div class="container statement__grid">
     <h2 class="statement__headline">HLRCは、<br>半蔵門線で城南と城東をつなぐ、<br>ランクラブ。</h2>
     <div class="statement__body mono">
-      <p>駒沢公園発の Komazawa Run Club（KCRDC）から発展。城南（駒沢・渋谷側）と城東（押上・錦糸町側）を半蔵門線でつなぎ、ときに競い合うランチームへ。経験不問。走りたい気持ちと好奇心があればOK。</p>
-      <p>Born at Komazawa Park as KCRDC. Now stretching along the Hanzomon Line — linking Jonan and Joto, sometimes as rivals, always as one crew. No experience needed. Just the urge to run and a bit of curiosity.</p>
+      <p>東京メトロ半蔵門線沿線を走るランクラブ。城南（駒沢・明治公園）と城東（半蔵門・水天宮・押上）を半蔵門線でつなぎ、朝はコーヒー、夜はビール。経験不問。走りたい気持ちと好奇心があればOK。</p>
+      <p>A run club along the Tokyo Metro Hanzomon Line — linking Jonan (Komazawa, Meiji Park) and Joto (Hanzomon, Suitengu, Oshiage). Coffee in the morning, beer at night. No experience needed. Just the urge to run and a bit of curiosity.</p>
     </div>
   </div>
 </section>
@@ -267,7 +244,7 @@
     </div>
     <div class="footer__copy">
       <h6>&copy; <span id="year"></span> HLRC</h6>
-      <ul><li><span>Hanzomon Line Run Club — Tokyo</span></li><li><span>Formerly KCRDC</span></li></ul>
+      <ul><li><span>Hanzomon Line Run Club — Tokyo</span></li></ul>
     </div>
   </div>
 </footer>
@@ -275,6 +252,7 @@
 <script src="js/config.js"></script>
 <script src="js/schedule.js"></script>
 <script src="js/spots.js"></script>
+<script src="js/line.js"></script>
 <script src="js/live.js"></script>
 <script src="js/main.js"></script>
 </body>
