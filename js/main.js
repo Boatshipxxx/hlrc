@@ -23,7 +23,9 @@
   // スケジュール描画
   var list = document.getElementById('schedule-list');
   var title = document.getElementById('scheduleTitle');
-  if (title && data.month) title.textContent = data.month + 'の予定 / ' + (data.monthEn || '');
+  if (title && data.month) title.textContent = data.month + 'のスケジュール';
+  var mEn = document.getElementById('posterMonthEn'); if (mEn && data.monthEn) mEn.textContent = data.monthEn.slice(0, 3) + '.';
+  var yr = document.getElementById('posterYear'); if (yr && data.year) yr.textContent = String(data.year);
   if (list) {
     var icons = {
       morning: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
